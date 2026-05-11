@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO AVANÇADO -->
+    <title>Conversor JPEG para PNG Grátis | Online e Seguro | JPEG ↔ PNG</title>
+    <meta name="description" content="Converta JPEG para PNG, PNG para JPEG e WEBP instantaneamente. O melhor conversor de imagem online e gratuito do Brasil. Processamento local, 100% privado e seguro.">
+    <meta name="keywords" content="conversor jpeg para png, converter png para jpeg, transformar jpeg em webp online, conversor de imagem grátis brasil, converter foto online seguro">
+    <meta name="author" content="JPG ↔ PNG Converter">
+    <link rel="canonical" href="https://seusite.github.io/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seusite.github.io/">
+    <meta property="og:title" content="Conversor JPG para PNG Grátis | Online e Seguro">
+    <meta property="og:description" content="Converta suas imagens no navegador sem enviar para servidores. Privacidade total.">
+    <meta property="og:image" content="https://seusite.github.io/screen.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Conversor JPG para PNG Grátis | Online e Seguro">
+    <meta property="twitter:description" content="Transforme imagens JPG em PNG instantaneamente no seu navegador.">
+
+    <!-- SCHEMA.ORG SEMÂNTICO AVANÇADO -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JPEG ↔ PNG ↔ WEBP Converter",
+        "alternateName": "Conversor de Imagem Online",
+        "url": "https://seusite.github.io/",
+        "description": "Ferramenta gratuita para converter JPEG, PNG e WEBP diretamente no navegador.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "1250"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Como converter JPEG para PNG online",
+        "description": "Siga estes passos simples para converter suas imagens JPEG para PNG sem perder qualidade.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Selecione o arquivo",
+            "text": "Clique no botão 'Escolher Arquivos' ou arraste sua imagem para a área indicada."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Aguarde a conversão",
+            "text": "O navegador processará a imagem instantaneamente usando a Canvas API."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Baixe o resultado",
+            "text": "Clique no botão 'Baixar Agora' para salvar sua nova imagem."
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <!-- Tailwind & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4344969627492671" crossorigin="anonymous"></script>
+
+    <!-- Bulk Processing Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        'primary-container': '#d1fae5',
+                        background: '#f0fdf4',
+                        surface: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-[#191b23] font-['Inter'] antialiased flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-14 md:h-16 flex justify-between items-center">
+            <div class="flex items-center gap-1.5 md:gap-2 cursor-pointer" onclick="window.location.reload()">
+                <span class="material-symbols-outlined text-primary text-2xl md:text-3xl font-bold">image_search</span>
+                <span class="font-['Manrope'] font-extrabold text-base md:text-xl tracking-tight text-primary">JPEG ↔ PNG ↔ WEBP</span>
+            </div>
+            <nav class="hidden lg:flex gap-6 md:gap-8">
+                <a href="#ferramenta" class="text-gray-600 hover:text-primary font-medium transition-colors text-xs md:text-sm">Conversor</a>
+                <a href="#recursos" class="text-gray-600 hover:text-primary font-medium transition-colors text-xs md:text-sm">Recursos</a>
+                <a href="#faq" class="text-gray-600 hover:text-primary font-medium transition-colors text-xs md:text-sm">FAQ</a>
+            </nav>
+            <div class="flex items-center gap-2 md:gap-4">
+                <span class="hidden xl:inline-block text-[10px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded">● Processamento Local</span>
+                <button class="bg-primary text-white text-[10px] md:text-sm font-bold px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg shadow-sm hover:shadow-md hover:bg-[#059669] transition-all">Grátis</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-grow w-full max-w-[1600px] mx-auto px-2 md:px-4 gap-2 md:gap-4">
+        
+        <!-- ADSENSE_LEFT (Skyscraper) -->
+        <aside class="hidden 2xl:flex flex-col w-[160px] py-10 sticky top-16 h-[calc(100vh-64px)] overflow-hidden shrink-0">
+            <!-- jpeg -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4344969627492671"
+                 data-ad-slot="5535953197"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+
+        <main class="flex-grow flex flex-col min-w-0">
+            <!-- Hero & Converter Section -->
+            <section id="ferramenta" class="w-full py-6 md:py-10">
+                <div class="max-w-4xl w-full mx-auto text-center">
+                    <h1 class="font-['Manrope'] text-3xl md:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4 leading-tight animate-fade-in">
+                        Conversor de Imagens <span class="text-primary">Online e Seguro</span>
+                    </h1>
+                    <p class="text-sm md:text-base text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.1s">
+                        Converta entre JPEG, PNG e WEBP instantaneamente no seu navegador. Privacidade total.
+                    </p>
+
+                    <!-- Converter Box -->
+                    <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-in mx-auto" style="animation-delay: 0.2s">
+                        <!-- Tabs -->
+                        <div class="flex border-b border-gray-100 bg-gray-50/50">
+                            <button id="tab-to-png" class="flex-1 py-3 md:py-4 font-bold text-xs md:text-sm text-primary border-b-2 border-primary bg-white transition-all">Para PNG</button>
+                            <button id="tab-to-jpeg" class="flex-1 py-3 md:py-4 font-medium text-xs md:text-sm text-gray-500 hover:bg-white transition-all">Para JPEG</button>
+                            <button id="tab-to-webp" class="flex-1 py-3 md:py-4 font-medium text-xs md:text-sm text-gray-500 hover:bg-white transition-all">Para WEBP</button>
+                        </div>
+
+                        <!-- Dropzone -->
+                        <div id="dropzone" class="p-4 md:p-10 m-3 md:m-6 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary/40 hover:bg-emerald-50/30 transition-all cursor-pointer group relative min-h-[250px] md:min-h-[350px] flex items-center justify-center">
+                            <input type="file" id="file-input" class="hidden" accept="image/jpeg,image/png,image/webp" multiple>
+                            
+                            <div id="dropzone-content" class="flex flex-col items-center">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-3 md:mb-5 group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">cloud_upload</span>
+                                </div>
+                                <h3 class="text-base md:text-lg font-bold text-gray-800 mb-1">Selecione as imagens</h3>
+                                <p class="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">ou arraste e solte aqui</p>
+                                <button class="bg-primary text-white text-sm md:text-base font-bold px-6 py-2.5 md:px-8 md:py-3.5 rounded-xl shadow-lg shadow-emerald-200 hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95">
+                                    Escolher Arquivos
+                                </button>
+                                <div class="mt-4 flex gap-2">
+                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">JPEG</span>
+                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">PNG</span>
+                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">WEBP</span>
+                                </div>
+                            </div>
+
+                            <!-- Preview / Processing State -->
+                            <div id="processing-content" class="hidden flex flex-col items-center">
+                                <div class="loader mb-6"></div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Convertendo...</h3>
+                                <p class="text-gray-500">Isso levará apenas um instante.</p>
+                            </div>
+
+                            <div id="preview-content" class="hidden flex flex-col items-center w-full">
+                                <div id="file-list" class="w-full max-h-64 overflow-y-auto mb-6 space-y-2 p-2 bg-gray-50 rounded-lg border border-gray-100">
+                                    <!-- Filenames will be injected here -->
+                                </div>
+                                <div class="flex flex-col gap-4 w-full max-w-xs">
+                                    <div id="quality-container" class="hidden space-y-2">
+                                        <div class="flex justify-between text-xs font-bold text-gray-500">
+                                            <span>Qualidade de Saída</span>
+                                            <span id="quality-value">90%</span>
+                                        </div>
+                                        <input type="range" id="quality-range" min="1" max="100" value="90" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
+                                    </div>
+                                    <button id="convert-btn" class="bg-primary text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-[#059669] transition-all flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined">auto_fix_high</span>
+                                        Converter e Baixar (.zip)
+                                    </button>
+                                    <button id="reset-btn" class="text-gray-400 text-xs font-bold hover:text-red-500 transition-colors">Limpar Lista</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ADSENSE_MIDDLE -->
+            <div class="w-full flex justify-center py-8">
+                <div class="max-w-[728px] w-full h-[90px] bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400">
+                    ADSENSE_MIDDLE
+                </div>
+            </div>
+
+            <!-- Features -->
+            <section id="recursos" class="bg-white py-20 border-y border-gray-100 rounded-3xl mb-10">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="font-['Manrope'] text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">A ferramenta preferida no Brasil</h2>
+                        <p class="text-gray-600">Simplicidade, velocidade e segurança local para suas imagens.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">bolt</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Instantâneo</h4>
+                            <p class="text-gray-600 leading-relaxed">Sem filas. A conversão ocorre no momento em que você solta o arquivo.</p>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">verified_user</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Privacidade</h4>
+                            <p class="text-gray-600 leading-relaxed">Suas fotos não são enviadas para a nuvem. Processamento 100% offline no browser.</p>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">image</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Fidelidade</h4>
+                            <p class="text-gray-600 leading-relaxed">Mantemos as cores e a resolução original para resultados profissionais.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="max-w-3xl mx-auto px-6 py-20">
+                <h2 class="font-['Manrope'] text-3xl font-extrabold text-center mb-12">Dúvidas Frequentes</h2>
+                <div class="space-y-4">
+                    <details class="group bg-gray-50 rounded-xl border border-gray-100 overflow-hidden" open>
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+                            Como o conversor funciona sem upload?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Utilizamos a tecnologia Canvas API do próprio navegador. O código JavaScript lê os pixels da sua imagem e os redesenha no formato desejado localmente.
+                        </div>
+                    </details>
+                    <details class="group bg-gray-50 rounded-xl border border-gray-100 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+                            Quais formatos são suportados?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Atualmente suportamos conversões bidirecionais entre JPEG, PNG e WEBP.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- ADSENSE_BOTTOM (Matched Content) -->
+            <section class="w-full max-w-4xl mx-auto mb-10">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="autorelaxed"
+                     data-ad-client="ca-pub-4344969627492671"
+                     data-ad-slot="5480112874"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
+        </main>
+
+        <!-- ADSENSE_RIGHT (Skyscraper) -->
+        <aside class="hidden 2xl:flex flex-col w-[160px] py-10 sticky top-16 h-[calc(100vh-64px)] overflow-hidden shrink-0">
+            <!-- jpeg -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4344969627492671"
+                 data-ad-slot="5535953197"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-2xl font-bold">image_search</span>
+                    <span class="font-['Manrope'] font-extrabold text-lg text-gray-900">JPEG ↔ PNG ↔ WEBP</span>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-500">
+                    <a href="privacidade.html" class="hover:text-primary transition-colors">Privacidade</a>
+                    <a href="termos.html" class="hover:text-primary transition-colors">Termos</a>
+                </nav>
+            </div>
+            <div class="text-center text-sm text-gray-400 border-t border-gray-50 pt-8">
+                &copy; 2024 JPG ↔ PNG Converter Brasil. Processamento local 100% seguro via Canvas API.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Canvas Escondido -->
+    <canvas id="conversion-canvas" class="hidden"></canvas>
+
+    <script src="app.js"></script>
+</body>
+</html>
