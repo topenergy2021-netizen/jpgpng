@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre & Contato | JPEG ↔ PNG ↔ WEBP Converter</title>
+    <meta name="robots" content="noindex">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        background: '#f0fdf4',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-[#064e3b] font-['Inter'] antialiased">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <span class="material-symbols-outlined text-primary text-3xl font-bold">image_search</span>
+                <span class="font-['Manrope'] font-extrabold text-xl tracking-tight text-primary">JPEG ↔ PNG ↔ WEBP</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-primary hover:underline">Voltar ao Início</a>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <h1 class="font-['Manrope'] text-4xl font-extrabold mb-8 text-gray-900">Sobre & Contato</h1>
+        
+        <div class="prose prose-emerald max-w-none text-gray-600 space-y-8">
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Nossa Missão</h2>
+                <p>O <strong>JPEG ↔ PNG ↔ WEBP Converter</strong> nasceu com o objetivo de oferecer uma ferramenta de conversão de imagens rápida, gratuita e, acima de tudo, privada. Acreditamos que seus arquivos não precisam sair do seu computador para serem processados.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Como Funciona</h2>
+                <p>Utilizamos a tecnologia <strong>Canvas API</strong> do próprio navegador para realizar as conversões. Isso garante que o processamento seja feito 100% localmente no seu dispositivo. Nenhum dado é enviado para nossos servidores, garantindo segurança total para suas fotos e documentos.</p>
+            </section>
+
+            <section class="bg-white p-8 rounded-2xl border border-emerald-100 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Contato</h2>
+                <p class="mb-4">Tem alguma dúvida, sugestão ou feedback? Entre em contato conosco pelo e-mail abaixo:</p>
+                <div class="flex items-center gap-3 text-primary font-bold text-lg">
+                    <span class="material-symbols-outlined">mail</span>
+                    <a href="mailto:contato@topenergy2021-netizen.github.io" class="hover:underline">contato@topenergy2021-netizen.github.io</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-400">
+            &copy; 2026 JPEG ↔ PNG ↔ WEBP Converter. Processamento local 100% seguro.
+        </div>
+    </footer>
+</body>
+</html>
