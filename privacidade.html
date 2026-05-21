@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade | convertejpg.site</title>
-    <meta name="description" content="Leia nossa política de privacidade para entender como protegemos seus dados e como nosso processamento local de imagens funciona.">
+    <meta name="description" content="Leia nossa política de privacidade para entender como protegemos seus dados, o uso de cookies pelo Google AdSense e como o processamento de imagens local funciona.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://convertejpg.site/privacidade.html">
     
+    <!-- Script de verificação de tema (Prevenção de Flash de Luz) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4344969627492671" crossorigin="anonymous"></script>
     
@@ -23,65 +32,120 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         primary: '#10b981',
+                        'primary-hover': '#059669',
                         background: '#f0fdf4',
+                        surface: '#ffffff',
                     }
                 }
             }
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-background text-[#191b23] font-['Inter'] antialiased">
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+<body class="bg-background text-[#191b23] dark:bg-[#0c1015] dark:text-[#c9d1d9] font-['Inter'] antialiased flex flex-col min-h-screen">
+    
+    <header class="bg-white dark:bg-[#0d1117] border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 cursor-pointer">
                 <span class="material-symbols-outlined text-primary text-3xl font-bold">image_search</span>
                 <span class="font-['Manrope'] font-extrabold text-xl tracking-tight text-primary">JPEG ↔ PNG ↔ WEBP</span>
             </a>
-            <a href="index.html" class="text-sm font-bold text-primary hover:underline">Voltar ao Início</a>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-sm font-bold text-primary hover:underline">Voltar ao Início</a>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-16">
-        <h1 class="font-['Manrope'] text-4xl font-extrabold mb-8">Política de Privacidade</h1>
+    <main class="max-w-3xl mx-auto px-6 py-16 flex-grow">
+        <h1 class="font-['Manrope'] text-4xl font-extrabold mb-8 text-gray-900 dark:text-white">Política de Privacidade</h1>
         
-        <div class="prose prose-blue max-w-none text-gray-600 space-y-6">
+        <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-6">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Última atualização: 21 de maio de 2026</p>
+            
             <section>
-                <h2 class="text-xl font-bold text-gray-900 mb-4">1. Processamento Local de Dados</h2>
-                <p>Nossa ferramenta foi projetada com foco total na sua privacidade. Todo o processamento de conversão de imagens ocorre localmente no seu navegador utilizando a Canvas API. Isso significa que suas imagens nunca são enviadas para nossos servidores.</p>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">1. Processamento Local e Privacidade de Dados</h2>
+                <p>Valorizamos a privacidade das suas imagens acima de tudo. Nosso conversor de imagens opera com tecnologia <strong>Canvas API</strong> diretamente no seu navegador. O processamento das imagens é feito de forma 100% local no seu computador ou dispositivo móvel. <strong>Nenhum arquivo de imagem é transmitido ou guardado em nossos servidores.</strong> Você mantém o controle total e exclusivo sobre as suas fotos.</p>
             </section>
 
             <section>
-                <h2 class="text-xl font-bold text-gray-900 mb-4">2. Coleta de Informações</h2>
-                <p>Não coletamos informações pessoais identificáveis dos usuários que utilizam nossa ferramenta de conversão. Como não há upload de arquivos, não temos acesso ao conteúdo das suas imagens.</p>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">2. Coleta de Informações não Pessoais</h2>
+                <p>Nós não coletamos dados pessoais identificáveis (como nome, e-mail ou telefone) no decorrer da utilização normal da nossa ferramenta de conversão. No entanto, coletamos informações não pessoais de forma agregada para fins analíticos, como tipos de navegadores, páginas acessadas e tempo de permanência no site, para contínua otimização e melhoria do serviço.</p>
             </section>
 
             <section>
-                <h2 class="text-xl font-bold text-gray-900 mb-4">3. Cookies e Publicidade</h2>
-                <p>Utilizamos o Google AdSense para exibir anúncios. O Google pode usar cookies para veicular anúncios com base em suas visitas anteriores ao nosso site ou a outros sites na internet. Você pode optar por sair da publicidade personalizada visitando as Configurações de anúncios do Google.</p>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">3. Google AdSense e Cookies de Terceiros</h2>
+                <p>Utilizamos o <strong>Google AdSense</strong> para a veiculação de anúncios em nosso site. Como editor parceiro do Google, estamos sujeitos às seguintes regras de divulgação:</p>
+                <ul class="list-disc pl-6 space-y-2 mt-2">
+                    <li>Terceiros (incluindo o Google) usam cookies para veicular anúncios com base em visitas anteriores dos usuários a este site ou a outros sites na internet.</li>
+                    <li>Com o uso do cookie de publicidade (como o cookie DoubleClick), o Google e os parceiros dele podem veicular anúncios para os usuários com base nas visitas feitas a este e/ou a outros sites na internet.</li>
+                    <li>Você pode desativar a publicidade personalizada acessando as <a href="https://adssettings.google.com" target="_blank" rel="noopener" class="text-primary hover:underline font-medium">Configurações de anúncios do Google</a>. Alternativamente, você pode desativar o uso de cookies de terceiros para fins de publicidade personalizada visitando o site <a href="https://www.aboutads.info" target="_blank" rel="noopener" class="text-primary hover:underline font-medium">aboutads.info</a>.</li>
+                </ul>
+                <p class="mt-3">Para mais informações sobre as práticas do Google em relação aos dados de usuários e como eles são recolhidos, acesse a página oficial do Google: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener" class="text-primary hover:underline font-medium">Como o Google trata os dados dos sites e aplicativos parceiros</a>.</p>
             </section>
 
             <section>
-                <h2 class="text-xl font-bold text-gray-900 mb-4">4. Links para Terceiros</h2>
-                <p>Nosso site pode conter links para sites externos que não são operados por nós. Não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</p>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">4. Cookies de Estatísticas e Desempenho</h2>
+                <p>Utilizamos cookies de análise (como o Microsoft Clarity) para registrar o comportamento anônimo do usuário no site (mapas de calor, cliques e rolagem). Esses cookies nos ajudam a identificar erros técnicos, melhorar a experiência do usuário e garantir o desempenho ideal do site. Os dados recolhidos por esses serviços são agregados e completamente anônimos.</p>
             </section>
 
             <section>
-                <h2 class="text-xl font-bold text-gray-900 mb-4">5. Consentimento</h2>
-                <p>Ao utilizar nosso site, você concorda com nossa política de privacidade e termos de uso.</p>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">5. Seus Direitos (LGPD e RGPD)</h2>
+                <p>Se você reside no Brasil (sujeito à Lei Geral de Proteção de Dados - LGPD) ou na União Europeia (sujeito ao Regulamento Geral sobre a Proteção de Dados - RGPD), você tem direitos específicos em relação aos cookies armazenados em seu navegador. Você pode a qualquer momento rejeitar, gerenciar ou apagar os cookies por meio das configurações do seu navegador de internet.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">6. Contato e Esclarecimentos</h2>
+                <p>Se tiver alguma dúvida sobre a nossa política de privacidade, as práticas deste site ou se desejar obter mais informações sobre como seus dados não-pessoais de navegação são tratados, entre em contato através do e-mail: <a href="mailto:contato@convertejpg.site" class="text-primary hover:underline font-bold">contato@convertejpg.site</a>.</p>
             </section>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-100 py-12 mt-20">
-        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-400">
+    <footer class="bg-white dark:bg-[#0d1117] border-t border-gray-100 dark:border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-400 dark:text-gray-500">
             &copy; 2026 JPEG ↔ PNG ↔ WEBP Converter. Todos os direitos reservados.
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-white dark:bg-[#161b22] border border-gray-100 dark:border-gray-800 p-4 rounded-xl shadow-2xl z-50 transition-all duration-300 transform translate-y-20 opacity-0 hidden">
+        <div class="flex flex-col gap-3">
+            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                Utilizamos cookies para personalizar anúncios e analisar o nosso tráfego através do Google AdSense e Clarity. Ao continuar navegando, você concorda com o uso de cookies de acordo com a nossa <a href="privacidade.html" class="text-primary hover:underline font-bold">Política de Privacidade</a>.
+            </p>
+            <div class="flex justify-end gap-2">
+                <button id="cookie-accept" class="bg-primary hover:bg-primary-hover text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
+                    Aceitar
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAccept = document.getElementById('cookie-accept');
+            
+            if (cookieBanner && cookieAccept && !localStorage.getItem('cookie-consent')) {
+                cookieBanner.classList.remove('hidden');
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-20', 'opacity-0');
+                }, 100);
+                
+                cookieAccept.addEventListener('click', () => {
+                    localStorage.setItem('cookie-consent', 'accepted');
+                    cookieBanner.classList.add('translate-y-20', 'opacity-0');
+                    setTimeout(() => {
+                        cookieBanner.classList.add('hidden');
+                    }, 300);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

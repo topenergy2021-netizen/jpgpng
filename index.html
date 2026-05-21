@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO AVANÇADO -->
-    <title>Conversor JPEG para PNG Grátis | Online e Seguro | convertejpg.site</title>
-    <meta name="description" content="Converta JPEG para PNG, PNG para JPEG e WEBP instantaneamente no navegador. O melhor conversor de imagem online e gratuito. Processamento local, 100% privado e seguro.">
+    <title>Conversor de Imagem Grátis | JPG, PNG e WEBP Online e Seguro</title>
+    <meta name="description" content="Converta JPG para PNG, PNG para JPG e WEBP instantaneamente no navegador. O melhor conversor de imagem online e gratuito. Processamento local, 100% privado e seguro.">
     <meta name="keywords" content="conversor jpeg para png, converter png para jpeg, transformar jpeg em webp online, conversor de imagem grátis, converter foto online seguro, convertejpg, converter webp para jpg, converter jpg para webp, jpg to png, png to jpg, png to webp, jpg to webp, webp to jpg, webp to png">
     <meta name="author" content="convertejpg.site">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#10b981">
     <link rel="canonical" href="https://convertejpg.site/">
     
+    <!-- Script de verificação de tema (Prevenção de Flash de Luz) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://convertejpg.site/">
-    <meta property="og:title" content="Conversor JPEG para PNG Grátis | Online e Seguro">
-    <meta property="og:description" content="Converta JPEG, PNG e WEBP instantaneamente no navegador. 100% privado e gratuito.">
+    <meta property="og:title" content="Conversor de Imagem Grátis | JPG, PNG e WEBP Online e Seguro">
+    <meta property="og:description" content="Converta JPEG, PNG e WEBP instantaneamente no seu navegador. Processamento local 100% privado e gratuito.">
     <meta property="og:image" content="https://convertejpg.site/og-image.png">
     <meta property="og:locale" content="pt_BR">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Conversor JPG para PNG Grátis | Online e Seguro">
-    <meta property="twitter:description" content="Transforme imagens JPG em PNG instantaneamente no seu navegador.">
+    <meta property="twitter:title" content="Conversor de Imagem Grátis | JPG, PNG e WEBP Online e Seguro">
+    <meta property="twitter:description" content="Transforme imagens JPG, PNG e WEBP instantaneamente no seu navegador. Sem uploads.">
 
     <!-- SCHEMA.ORG SEMÂNTICO AVANÇADO -->
     <script type="application/ld+json">
@@ -32,10 +41,10 @@
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Conversor JPEG ↔ PNG ↔ WEBP",
+        "name": "Conversor de Imagens Local e Seguro",
         "alternateName": "convertejpg.site",
         "url": "https://convertejpg.site/",
-        "description": "Ferramenta gratuita para converter JPEG, PNG e WEBP diretamente no navegador.",
+        "description": "Ferramenta gratuita para converter JPEG, PNG e WEBP diretamente no navegador sem enviar arquivos a servidores.",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows, macOS, Linux, Android, iOS",
         "offers": {
@@ -47,23 +56,28 @@
       {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "Como converter JPEG para PNG online",
-        "description": "Siga estes passos simples para converter suas imagens JPEG para PNG sem perder qualidade.",
+        "name": "Como converter imagens no navegador sem upload",
+        "description": "Tutorial simples de como converter imagens entre os formatos JPG, PNG e WEBP diretamente na memória do seu navegador.",
         "step": [
           {
             "@type": "HowToStep",
             "name": "Selecione o arquivo",
-            "text": "Clique no botão 'Escolher Arquivos' ou arraste sua imagem para a área indicada."
+            "text": "Clique em 'Escolher Arquivos' ou arraste as fotos para o painel de conversão."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Escolha o formato de saída",
+            "text": "Escolha entre converter Para PNG, Para JPEG ou Para WEBP usando as abas superiores."
           },
           {
             "@type": "HowToStep",
             "name": "Aguarde a conversão",
-            "text": "O navegador processará a imagem instantaneamente usando a Canvas API."
+            "text": "O navegador processa as imagens em milissegundos utilizando a Canvas API."
           },
           {
             "@type": "HowToStep",
-            "name": "Baixe o resultado",
-            "text": "Clique no botão 'Baixar Agora' para salvar sua nova imagem."
+            "name": "Baixe o arquivo final",
+            "text": "O download é iniciado automaticamente. Arquivos únicos vêm diretamente, múltiplos arquivos são empacotados em .zip."
           }
         ]
       }
@@ -94,6 +108,7 @@
 
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -107,107 +122,119 @@
         }
     </script>
 </head>
-<body class="bg-background text-[#191b23] font-['Inter'] antialiased flex flex-col min-h-screen">
+<body class="bg-background dark:bg-[#0c1015] text-[#191b23] dark:text-[#c9d1d9] font-['Inter'] antialiased flex flex-col min-h-screen transition-colors duration-300">
 
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header class="bg-white dark:bg-[#0d1117] border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 md:px-6 h-14 md:h-16 flex justify-between items-center">
             <div class="flex items-center gap-1.5 md:gap-2 cursor-pointer" onclick="window.location.reload()">
                 <span class="material-symbols-outlined text-primary text-2xl md:text-3xl font-bold">image_search</span>
                 <span class="font-['Manrope'] font-extrabold text-base md:text-xl tracking-tight text-primary">JPEG ↔ PNG ↔ WEBP</span>
             </div>
+            
             <nav class="hidden lg:flex gap-6 md:gap-8">
-                <a href="#ferramenta" class="text-gray-600 hover:text-primary font-medium transition-colors text-xs md:text-sm">Conversor</a>
-                <a href="#recursos" class="text-gray-600 hover:text-primary font-medium transition-colors text-xs md:text-sm">Recursos</a>
-                <a href="#faq" class="text-gray-600 hover:text-primary font-medium transition-colors text-xs md:text-sm">FAQ</a>
+                <a href="#ferramenta" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors text-xs md:text-sm">Conversor</a>
+                <a href="#tutorial" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors text-xs md:text-sm">Como Funciona</a>
+                <a href="#comparativo" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors text-xs md:text-sm">Formatos</a>
+                <a href="#faq" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors text-xs md:text-sm">FAQ</a>
             </nav>
+            
             <div class="flex items-center gap-2 md:gap-4">
-                <span class="hidden xl:inline-block text-[10px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded">● Processamento Local</span>
-                <button class="bg-primary text-white text-[10px] md:text-sm font-bold px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg shadow-sm hover:shadow-md hover:bg-[#059669] transition-all">Grátis</button>
+                <span class="hidden xl:inline-block text-[10px] font-bold text-green-600 dark:text-green-400 bg-green-50 dark:bg-emerald-950/30 px-2 py-1 rounded">● Processamento Local</span>
+                
+                <!-- Botão Modo Escuro -->
+                <button id="theme-toggle" class="p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-lg transition-colors flex items-center justify-center" aria-label="Alternar tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+                
+                <a href="#ferramenta" class="bg-primary text-white text-[10px] md:text-sm font-bold px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg shadow-sm hover:shadow-md hover:bg-[#059669] transition-all">Grátis</a>
             </div>
         </div>
     </header>
 
     <div class="flex flex-grow w-full max-w-[1600px] mx-auto px-2 md:px-4 gap-2 md:gap-4">
         
-        <!-- ADSENSE_LEFT (Skyscraper) -->
+        <!-- ADSENSE_LEFT (Skyscraper) - Safe ad zone with proper label and padding -->
         <aside class="hidden 2xl:flex flex-col w-[160px] py-10 sticky top-16 h-[calc(100vh-64px)] overflow-hidden shrink-0">
-            <!-- jpeg -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-4344969627492671"
-                 data-ad-slot="5535953197"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="ad-container w-full h-[600px]">
+                <span class="ad-label">Publicidade</span>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4344969627492671"
+                     data-ad-slot="5535953197"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </aside>
 
         <main class="flex-grow flex flex-col min-w-0">
+            
             <!-- Hero & Converter Section -->
             <section id="ferramenta" class="w-full py-6 md:py-10">
                 <div class="max-w-4xl w-full mx-auto text-center">
-                    <h1 class="font-['Manrope'] text-3xl md:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4 leading-tight animate-fade-in">
+                    <h1 class="font-['Manrope'] text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-3 md:mb-4 leading-tight animate-fade-in">
                         Conversor de Imagens <span class="text-primary">Online e Seguro</span>
                     </h1>
-                    <p class="text-sm md:text-base text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.1s">
-                        Converta entre JPEG, PNG e WEBP instantaneamente no seu navegador. Privacidade total.
+                    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.1s">
+                        Converta entre JPEG, PNG e WEBP instantaneamente no seu navegador. Privacidade total e processamento 100% local.
                     </p>
 
                     <!-- Converter Box -->
-                    <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-in mx-auto" style="animation-delay: 0.2s">
+                    <div class="bg-white dark:bg-[#0d1117] rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-800 overflow-hidden animate-fade-in mx-auto" style="animation-delay: 0.2s">
                         <!-- Tabs -->
-                        <div class="flex border-b border-gray-100 bg-gray-50/50">
-                            <button id="tab-to-png" class="flex-1 py-3 md:py-4 font-bold text-xs md:text-sm text-primary border-b-2 border-primary bg-white transition-all">Para PNG</button>
-                            <button id="tab-to-jpeg" class="flex-1 py-3 md:py-4 font-medium text-xs md:text-sm text-gray-500 hover:bg-white transition-all">Para JPEG</button>
-                            <button id="tab-to-webp" class="flex-1 py-3 md:py-4 font-medium text-xs md:text-sm text-gray-500 hover:bg-white transition-all">Para WEBP</button>
+                        <div class="flex border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-[#161b22]/50">
+                            <button id="tab-to-png" class="flex-1 py-3 md:py-4 font-bold text-xs md:text-sm text-primary border-b-2 border-primary bg-white dark:bg-[#0d1117] transition-all">Para PNG</button>
+                            <button id="tab-to-jpeg" class="flex-1 py-3 md:py-4 font-medium text-xs md:text-sm text-gray-500 dark:text-gray-400 hover:bg-white dark:hover:bg-[#0d1117] transition-all">Para JPEG</button>
+                            <button id="tab-to-webp" class="flex-1 py-3 md:py-4 font-medium text-xs md:text-sm text-gray-500 dark:text-gray-400 hover:bg-white dark:hover:bg-[#0d1117] transition-all">Para WEBP</button>
                         </div>
 
                         <!-- Dropzone -->
-                        <div id="dropzone" class="p-4 md:p-10 m-3 md:m-6 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary/40 hover:bg-emerald-50/30 transition-all cursor-pointer group relative min-h-[250px] md:min-h-[350px] flex items-center justify-center">
+                        <div id="dropzone" class="p-4 md:p-10 m-3 md:m-6 border-2 border-dashed border-gray-200 dark:border-gray-800 rounded-xl hover:border-primary/40 dark:hover:border-primary/40 hover:bg-emerald-50/30 dark:hover:bg-[#10b981]/5 transition-all cursor-pointer group relative min-h-[250px] md:min-h-[350px] flex items-center justify-center">
                             <input type="file" id="file-input" class="hidden" accept="image/jpeg,image/png,image/webp" multiple>
                             
                             <div id="dropzone-content" class="flex flex-col items-center">
-                                <div class="w-12 h-12 md:w-16 md:h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-3 md:mb-5 group-hover:scale-110 transition-transform">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-emerald-50 dark:bg-emerald-950/40 rounded-full flex items-center justify-center mb-3 md:mb-5 group-hover:scale-110 transition-transform">
                                     <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">cloud_upload</span>
                                 </div>
-                                <h3 class="text-base md:text-lg font-bold text-gray-800 mb-1">Selecione as imagens</h3>
-                                <p class="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">ou arraste e solte aqui</p>
-                                <button class="bg-primary text-white text-sm md:text-base font-bold px-6 py-2.5 md:px-8 md:py-3.5 rounded-xl shadow-lg shadow-emerald-200 hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95">
+                                <h3 class="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200 mb-1">Selecione as imagens</h3>
+                                <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-4 md:mb-6">ou arraste e solte aqui</p>
+                                <button class="bg-primary text-white text-sm md:text-base font-bold px-6 py-2.5 md:px-8 md:py-3.5 rounded-xl shadow-lg shadow-emerald-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95">
                                     Escolher Arquivos
                                 </button>
                                 <div class="mt-4 flex gap-2">
-                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">JPEG</span>
-                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">PNG</span>
-                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">WEBP</span>
+                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-[#161b22] px-1.5 py-0.5 rounded">JPEG</span>
+                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-[#161b22] px-1.5 py-0.5 rounded">PNG</span>
+                                    <span class="text-[9px] font-bold tracking-widest text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-[#161b22] px-1.5 py-0.5 rounded">WEBP</span>
                                 </div>
                             </div>
 
                             <!-- Preview / Processing State -->
                             <div id="processing-content" class="hidden flex flex-col items-center">
                                 <div class="loader mb-6"></div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Convertendo...</h3>
-                                <p class="text-gray-500">Isso levará apenas um instante.</p>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Convertendo...</h3>
+                                <p class="text-gray-500 dark:text-gray-400">Isso levará apenas um instante.</p>
                             </div>
 
                             <div id="preview-content" class="hidden flex flex-col items-center w-full">
-                                <div id="file-list" class="w-full max-h-64 overflow-y-auto mb-6 space-y-2 p-2 bg-gray-50 rounded-lg border border-gray-100">
-                                    <!-- Filenames will be injected here -->
+                                <div id="file-list" class="w-full max-h-64 overflow-y-auto mb-6 space-y-2 p-2 bg-gray-50 dark:bg-[#161b22] rounded-lg border border-gray-100 dark:border-gray-800">
+                                    <!-- Os nomes dos arquivos serão injetados aqui -->
                                 </div>
                                 <div class="flex flex-col gap-4 w-full max-w-xs">
                                     <div id="quality-container" class="hidden space-y-2">
-                                        <div class="flex justify-between text-xs font-bold text-gray-500">
+                                        <div class="flex justify-between text-xs font-bold text-gray-500 dark:text-gray-400">
                                             <span>Qualidade de Saída</span>
                                             <span id="quality-value">90%</span>
                                         </div>
-                                        <input type="range" id="quality-range" min="1" max="100" value="90" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
+                                        <input type="range" id="quality-range" min="1" max="100" value="90" class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary">
                                     </div>
                                     <button id="convert-btn" class="bg-primary text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-[#059669] transition-all flex items-center justify-center gap-2">
                                         <span class="material-symbols-outlined">auto_fix_high</span>
-                                        Converter e Baixar (.zip)
+                                        Converter e Baixar
                                     </button>
-                                    <button id="reset-btn" class="text-gray-400 text-xs font-bold hover:text-red-500 transition-colors">Limpar Lista</button>
+                                    <button id="reset-btn" class="text-gray-400 dark:text-gray-500 text-xs font-bold hover:text-red-500 transition-colors">Limpar Lista</button>
                                 </div>
                             </div>
                         </div>
@@ -215,45 +242,125 @@
                 </div>
             </section>
 
-            <!-- ADSENSE_MIDDLE -->
+            <!-- ADSENSE_MIDDLE - Safe ad zone with proper label and padding -->
             <div class="w-full flex justify-center py-8">
-                <ins class="adsbygoogle"
-                     style="display:block; min-width:300px; max-width:728px; width:100%; height:90px;"
-                     data-ad-client="ca-pub-4344969627492671"
-                     data-ad-slot="1234567890"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                <div class="ad-container w-full max-w-[728px] min-h-[90px]">
+                    <span class="ad-label">Publicidade</span>
+                    <ins class="adsbygoogle"
+                         style="display:block; min-width:300px; max-width:728px; width:100%; height:90px;"
+                         data-ad-client="ca-pub-4344969627492671"
+                         data-ad-slot="1234567890"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
             </div>
 
+            <!-- SEÇÃO DE CONTEÚDO ENRIQUECIDO PARA SEO (Combate a Conteúdo de Baixo Valor) -->
+            <article class="bg-white dark:bg-[#0d1117] border border-gray-200 dark:border-gray-800 rounded-3xl p-6 md:p-12 mb-10 shadow-sm">
+                
+                <!-- Tutorial de Uso -->
+                <section id="tutorial" class="mb-12">
+                    <h2 class="font-['Manrope'] text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-6">Como Converter Suas Imagens Localmente</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                        O processo de conversão do <strong>JPEG ↔ PNG ↔ WEBP Converter</strong> foi planejado para ser intuitivo e extremamente prático. Como processamos tudo em seu próprio computador, você não precisa aguardar filas de upload nem se preocupar com conexões lentas de internet. Siga o passo a passo:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="space-y-2">
+                            <span class="text-primary font-bold text-3xl">01.</span>
+                            <h3 class="font-bold text-gray-800 dark:text-gray-200">Escolha o Formato</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Selecione na aba superior o formato final que você deseja obter: **PNG**, **JPEG** ou **WEBP**.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-primary font-bold text-3xl">02.</span>
+                            <h3 class="font-bold text-gray-800 dark:text-gray-200">Adicione os Arquivos</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Arraste seus arquivos para o pontilhado ou clique em "Escolher Arquivos" para selecionar as fotos.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-primary font-bold text-3xl">03.</span>
+                            <h3 class="font-bold text-gray-800 dark:text-gray-200">Defina a Qualidade</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Ao converter para JPEG ou WEBP, você pode ajustar a compressão para equilibrar qualidade e tamanho de arquivo.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-primary font-bold text-3xl">04.</span>
+                            <h3 class="font-bold text-gray-800 dark:text-gray-200">Converta e Baixe</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Clique em "Converter" e as imagens serão baixadas. Arquivos múltiplos são baixados juntos em um pacote compactado `.zip`.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-gray-100 dark:border-gray-800 my-10" />
+
+                <!-- Comparativo de Formatos -->
+                <section id="comparativo" class="mb-12">
+                    <h2 class="font-['Manrope'] text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-6">Qual Formato de Imagem Escolher: JPG, PNG ou WEBP?</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                        Cada formato de imagem possui características técnicas otimizadas para finalidades específicas. Escolher o formato correto melhora a velocidade de carregamento de páginas Web, a qualidade visual e a eficiência no armazenamento:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="border border-gray-100 dark:border-gray-800 p-6 rounded-2xl bg-gray-50/50 dark:bg-[#161b22]/50">
+                            <h3 class="font-bold text-lg text-primary mb-3">JPEG / JPG</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                O **JPEG** é o formato mais universal da internet, muito utilizado em fotografias digitais. Ele utiliza compressão "lossy" (com perda de dados), o que permite compactar significativamente as imagens reduzindo seu peso, embora haja perda sutil de definição em altos níveis de compressão. **Não suporta fundos transparentes.**
+                            </p>
+                        </div>
+                        <div class="border border-gray-100 dark:border-gray-800 p-6 rounded-2xl bg-gray-50/50 dark:bg-[#161b22]/50">
+                            <h3 class="font-bold text-lg text-primary mb-3">PNG (Portable Network Graphics)</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                O **PNG** é um formato de compressão "lossless" (sem perda de dados). Ele é indispensável para logotipos, ícones, gráficos e capturas de tela onde textos e bordas exigem nitidez absoluta. O seu principal diferencial é o **suporte ao canal alfa (transparência)**. Contudo, seus arquivos costumam ser muito maiores do que JPGs correspondentes.
+                            </p>
+                        </div>
+                        <div class="border border-gray-100 dark:border-gray-800 p-6 rounded-2xl bg-gray-50/50 dark:bg-[#161b22]/50">
+                            <h3 class="font-bold text-lg text-primary mb-3">WEBP (Próxima Geração)</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Criado pelo Google, o **WEBP** é o formato moderno projetado para a web. Ele oferece compressão com e sem perda com eficiência superior: as imagens WEBP chegam a ser **26% menores em comparação a PNGs** e até **34% menores comparadas a JPEGs**, preservando transparência e alta qualidade visual.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-gray-100 dark:border-gray-800 my-10" />
+
+                <!-- Segurança do Processamento Local -->
+                <section class="space-y-4">
+                    <h2 class="font-['Manrope'] text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">Por que o Processamento Local no Navegador é Mais Seguro?</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        A grande maioria dos conversores online disponíveis na internet exige que você envie suas imagens para servidores de terceiros para realizar o processamento. Esse método apresenta riscos severos à privacidade de dados, pois você perde o controle sobre o que acontece com seus arquivos pessoais após o upload, além de sobrecarregar sua internet.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Nosso sistema adota a abordagem **Client-Side (Canvas API)**. Ao carregar a imagem, o navegador lê seus dados binários na memória cache temporária, desenha-a em um elemento de Canvas HTML5 em segundo plano e realiza a conversão algorítmica de pixel no próprio processador do seu computador. Os dados resultantes são codificados como um link de download imediato. **O arquivo nunca passa pela internet, garantindo sigilo absoluto.**
+                    </p>
+                </section>
+            </article>
+
             <!-- Features -->
-            <section id="recursos" class="bg-white py-20 border-y border-gray-100 rounded-3xl mb-10">
+            <section id="recursos" class="bg-white dark:bg-[#0d1117] py-20 border-y border-gray-100 dark:border-gray-800 rounded-3xl mb-10 shadow-sm">
                 <div class="max-w-5xl mx-auto px-6">
                     <div class="text-center mb-16">
-                        <h2 class="font-['Manrope'] text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">A ferramenta preferida no Brasil</h2>
-                        <p class="text-gray-600">Simplicidade, velocidade e segurança local para suas imagens.</p>
+                        <h2 class="font-['Manrope'] text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">A ferramenta preferida no Brasil</h2>
+                        <p class="text-gray-600 dark:text-gray-400">Simplicidade, velocidade e segurança local para suas imagens.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
-                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <div class="p-8 rounded-2xl bg-gray-50 dark:bg-[#161b22]/50 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all group">
+                            <div class="w-14 h-14 bg-white dark:bg-[#0d1117] rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                                 <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">bolt</span>
                             </div>
-                            <h4 class="text-xl font-bold mb-4">Instantâneo</h4>
-                            <p class="text-gray-600 leading-relaxed">Sem filas. A conversão ocorre no momento em que você solta o arquivo.</p>
+                            <h4 class="text-xl font-bold mb-4 dark:text-white">Conversão Instantânea</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Sem filas. A conversão ocorre no exato momento em que você adiciona o arquivo no site.</p>
                         </div>
-                        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
-                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <div class="p-8 rounded-2xl bg-gray-50 dark:bg-[#161b22]/50 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all group">
+                            <div class="w-14 h-14 bg-white dark:bg-[#0d1117] rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                                 <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">verified_user</span>
                             </div>
-                            <h4 class="text-xl font-bold mb-4">Privacidade</h4>
-                            <p class="text-gray-600 leading-relaxed">Suas fotos não são enviadas para a nuvem. Processamento 100% offline no browser.</p>
+                            <h4 class="text-xl font-bold mb-4 dark:text-white">Privacidade Inviolável</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Suas fotos não são enviadas para nuvem. O processamento é realizado offline no browser.</p>
                         </div>
-                        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
-                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <div class="p-8 rounded-2xl bg-gray-50 dark:bg-[#161b22]/50 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all group">
+                            <div class="w-14 h-14 bg-white dark:bg-[#0d1117] rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                                 <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">image</span>
                             </div>
-                            <h4 class="text-xl font-bold mb-4">Fidelidade</h4>
-                            <p class="text-gray-600 leading-relaxed">Mantemos as cores e a resolução original para resultados profissionais.</p>
+                            <h4 class="text-xl font-bold mb-4 dark:text-white">Fidelidade Cromática</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Preservamos integralmente as cores, metadados geométricos e a resolução original das imagens.</p>
                         </div>
                     </div>
                 </div>
@@ -261,80 +368,129 @@
 
             <!-- FAQ -->
             <section id="faq" class="max-w-3xl mx-auto px-6 py-20">
-                <h2 class="font-['Manrope'] text-3xl font-extrabold text-center mb-12">Dúvidas Frequentes</h2>
+                <h2 class="font-['Manrope'] text-3xl font-extrabold text-center mb-12 dark:text-white">Dúvidas Frequentes</h2>
                 <div class="space-y-4">
-                    <details class="group bg-gray-50 rounded-xl border border-gray-100 overflow-hidden" open>
-                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
-                            Como o conversor funciona sem upload?
+                    <details class="group bg-gray-50 dark:bg-[#0d1117] rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden" open>
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800 dark:text-gray-200">
+                            Como o conversor funciona sem fazer upload?
                             <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
                         </summary>
-                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
-                            Utilizamos a tecnologia Canvas API do próprio navegador. O código JavaScript lê os pixels da sua imagem e os redesenha no formato desejado localmente.
+                        <div class="p-6 pt-0 text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Utilizamos o motor JavaScript do próprio navegador junto com a Canvas API. Os arquivos de imagem selecionados são carregados na memória do browser como data URLs temporárias, redesenhados no canvas e codificados para exportação direta.
                         </div>
                     </details>
-                    <details class="group bg-gray-50 rounded-xl border border-gray-100 overflow-hidden">
-                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
-                            Quais formatos são suportados?
+                    <details class="group bg-gray-50 dark:bg-[#0d1117] rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800 dark:text-gray-200">
+                            Quais formatos de imagem são suportados?
                             <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
                         </summary>
-                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
-                            Atualmente suportamos conversões bidirecionais entre JPEG, PNG e WEBP.
+                        <div class="p-6 pt-0 text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Nosso sistema suporta conversões bidirecionais de alta precisão entre os formatos mais utilizados no mercado atual: **JPEG (JPG)**, **PNG** e **WEBP**.
+                        </div>
+                    </details>
+                    <details class="group bg-gray-50 dark:bg-[#0d1117] rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800 dark:text-gray-200">
+                            Há limite no tamanho ou número de arquivos?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Não. Como o processamento utiliza a memória RAM do seu próprio dispositivo, não impomos limites de largura de banda para upload. Você pode converter imagens de qualquer resolução com total liberdade de arquivos simultâneos.
                         </div>
                     </details>
                 </div>
             </section>
 
-            <!-- ADSENSE_BOTTOM (Matched Content) -->
+            <!-- ADSENSE_BOTTOM (Matched Content) - Safe ad zone with proper label and padding -->
             <section class="w-full max-w-4xl mx-auto mb-10">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-format="autorelaxed"
-                     data-ad-client="ca-pub-4344969627492671"
-                     data-ad-slot="5480112874"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                <div class="ad-container w-full min-h-[150px]">
+                    <span class="ad-label">Publicidade</span>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="autorelaxed"
+                         data-ad-client="ca-pub-4344969627492671"
+                         data-ad-slot="5480112874"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
             </section>
         </main>
 
-        <!-- ADSENSE_RIGHT (Skyscraper) -->
+        <!-- ADSENSE_RIGHT (Skyscraper) - Safe ad zone with proper label and padding -->
         <aside class="hidden 2xl:flex flex-col w-[160px] py-10 sticky top-16 h-[calc(100vh-64px)] overflow-hidden shrink-0">
-            <!-- jpeg -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-4344969627492671"
-                 data-ad-slot="5535953197"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="ad-container w-full h-[600px]">
+                <span class="ad-label">Publicidade</span>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4344969627492671"
+                     data-ad-slot="5535953197"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </aside>
 
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-100 py-12 mt-auto">
+    <footer class="bg-white dark:bg-[#0d1117] border-t border-gray-100 dark:border-gray-800 py-12 mt-auto">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-primary text-2xl font-bold">image_search</span>
-                    <span class="font-['Manrope'] font-extrabold text-lg text-gray-900">JPEG ↔ PNG ↔ WEBP</span>
+                    <span class="font-['Manrope'] font-extrabold text-lg text-gray-900 dark:text-white">JPEG ↔ PNG ↔ WEBP</span>
                 </div>
-                <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-500">
+                <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-500 dark:text-gray-400">
                     <a href="sobre.html" class="hover:text-primary transition-colors">Sobre</a>
                     <a href="privacidade.html" class="hover:text-primary transition-colors">Privacidade</a>
                     <a href="termos.html" class="hover:text-primary transition-colors">Termos</a>
                 </nav>
             </div>
-            <div class="text-center text-sm text-gray-400 border-t border-gray-50 pt-8">
-                &copy; 2026 JPEG ↔ PNG ↔ WEBP Converter. Todos os direitos reservados.
+            <div class="text-center text-sm text-gray-400 dark:text-gray-500 border-t border-gray-50 dark:border-gray-850 pt-8">
+                &copy; 2026 JPEG ↔ PNG ↔ WEBP Converter. Todos os direitos reservados. Processamento local 100% seguro.
             </div>
         </div>
     </footer>
 
     <!-- Canvas Escondido -->
     <canvas id="conversion-canvas" class="hidden"></canvas>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-white dark:bg-[#161b22] border border-gray-100 dark:border-gray-800 p-4 rounded-xl shadow-2xl z-50 transition-all duration-300 transform translate-y-20 opacity-0 hidden">
+        <div class="flex flex-col gap-3">
+            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                Utilizamos cookies para personalizar anúncios e analisar o nosso tráfego através do Google AdSense e Clarity. Ao continuar navegando, você concorda com o uso de cookies de acordo com a nossa <a href="privacidade.html" class="text-primary hover:underline font-bold">Política de Privacidade</a>.
+            </p>
+            <div class="flex justify-end gap-2">
+                <button id="cookie-accept" class="bg-primary hover:bg-primary-hover text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
+                    Aceitar
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAccept = document.getElementById('cookie-accept');
+            
+            if (cookieBanner && cookieAccept && !localStorage.getItem('cookie-consent')) {
+                cookieBanner.classList.remove('hidden');
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-20', 'opacity-0');
+                }, 100);
+                
+                cookieAccept.addEventListener('click', () => {
+                    localStorage.setItem('cookie-consent', 'accepted');
+                    cookieBanner.classList.add('translate-y-20', 'opacity-0');
+                    setTimeout(() => {
+                        cookieBanner.classList.add('hidden');
+                    }, 300);
+                });
+            }
+        });
+    </script>
 
     <script src="app.js"></script>
 </body>

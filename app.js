@@ -25,6 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentMode = 'to-png'; 
     let filesList = []; // Array of File objects
 
+    // --- Dark Mode Toggle ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.innerHTML = '<span class="material-symbols-outlined">dark_mode</span>';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.innerHTML = '<span class="material-symbols-outlined">light_mode</span>';
+            }
+        });
+        
+        // Inicializa o ícone conforme o tema ativo
+        if (document.documentElement.classList.contains('dark')) {
+            themeToggleBtn.innerHTML = '<span class="material-symbols-outlined">light_mode</span>';
+        } else {
+            themeToggleBtn.innerHTML = '<span class="material-symbols-outlined">dark_mode</span>';
+        }
+    }
+
     // --- Tab Switching ---
     const updateTabStyles = () => {
         const tabs = [
@@ -34,10 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         tabs.forEach(tab => {
             if (tab.mode === currentMode) {
-                tab.el.classList.add('text-primary', 'border-b-2', 'border-primary', 'bg-white', 'font-bold');
+                tab.el.classList.add('text-primary', 'border-b-2', 'border-primary', 'bg-white', 'dark:bg-[#0d1117]', 'font-bold');
                 tab.el.classList.remove('text-gray-500', 'font-medium');
             } else {
-                tab.el.classList.remove('text-primary', 'border-b-2', 'border-primary', 'bg-white', 'font-bold');
+                tab.el.classList.remove('text-primary', 'border-b-2', 'border-primary', 'bg-white', 'dark:bg-[#0d1117]', 'font-bold');
                 tab.el.classList.add('text-gray-500', 'font-medium');
             }
         });
@@ -68,14 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
         fileListContainer.innerHTML = '';
         filesList.forEach((file, index) => {
             const div = document.createElement('div');
-            div.className = 'flex justify-between items-center bg-white p-3 rounded border border-gray-100 text-sm animate-fade-in shadow-sm';
+            div.className = 'flex justify-between items-center bg-white dark:bg-[#161b22] p-3 rounded border border-gray-100 dark:border-gray-800 text-sm animate-fade-in shadow-sm';
             
             const ext = currentMode === 'to-png' ? 'PNG' : (currentMode === 'to-jpeg' ? 'JPEG' : 'WEBP');
             
             div.innerHTML = `
                 <div class="flex items-center gap-3 overflow-hidden">
                     <span class="material-symbols-outlined text-gray-400">image</span>
-                    <span class="truncate font-medium text-gray-700">${file.name}</span>
+                    <span class="truncate font-medium text-gray-700 dark:text-gray-300">${file.name}</span>
                 </div>
                 <div class="flex items-center gap-3 shrink-0">
                     <span class="text-[10px] font-bold text-primary bg-primary-container/30 px-2 py-0.5 rounded">→ ${ext}</span>
@@ -87,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fileListContainer.appendChild(div);
         });
 
-        // Add event listeners to remove buttons
+        // Event listener de remover
         document.querySelectorAll('.remove-file').forEach(btn => {
             btn.onclick = (e) => {
                 const idx = parseInt(e.currentTarget.getAttribute('data-index'));
@@ -96,6 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 else updateFileListUI();
             };
         });
+
+        // Alterar texto do botão de conversão
+        if (filesList.length === 1) {
+            convertBtn.innerHTML = `<span class="material-symbols-outlined">auto_fix_high</span> Converter e Baixar Imagem`;
+        } else {
+            convertBtn.innerHTML = `<span class="material-symbols-outlined">auto_fix_high</span> Converter e Baixar (.zip)`;
+        }
     };
 
     // --- UI States ---
@@ -171,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const base64 = dataUrl.split(',')[1];
                     const fileName = file.name.split('.').slice(0, -1).join('.') + '-converted.' + extension;
                     
-                    resolve({ name: fileName, data: base64 });
+                    resolve({ name: fileName, data: base64, mime: mime });
                 };
                 img.src = e.target.result;
             };
@@ -183,16 +213,35 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filesList.length === 0) return;
         
         showProcessing();
-        const zip = new JSZip();
         
-        for (const file of filesList) {
+        if (filesList.length === 1) {
+            // Conversão de arquivo único - download direto da imagem
+            const file = filesList[0];
             const result = await processImage(file);
-            zip.file(result.name, result.data, { base64: true });
-        }
-        
-        zip.generateAsync({ type: 'blob' }).then((content) => {
-            saveAs(content, "imagens_convertidas.zip");
+            
+            // Decodificar base64 para download direto do blob
+            const byteCharacters = atob(result.data);
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+            const blob = new Blob([byteArray], { type: result.mime });
+            
+            saveAs(blob, result.name);
             resetUI();
-        });
+        } else {
+            // Conversão em lote - cria arquivo ZIP
+            const zip = new JSZip();
+            for (const file of filesList) {
+                const result = await processImage(file);
+                zip.file(result.name, result.data, { base64: true });
+            }
+            
+            zip.generateAsync({ type: 'blob' }).then((content) => {
+                saveAs(content, "imagens_convertidas.zip");
+                resetUI();
+            });
+        }
     };
 });

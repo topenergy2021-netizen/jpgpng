@@ -12,6 +12,18 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark {
+    --primary: #10b981;
+    --primary-hover: #34d399;
+    --secondary: #064e3b;
+    --background: #0c1015;
+    --surface: #0d1117;
+    --on-background: #c9d1d9;
+    --on-surface-variant: #8b949e;
+    --outline-variant: #30363d;
+    --secondary-fixed: #161b22;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -28,8 +40,12 @@
 
 .dropzone-active {
     border-color: var(--primary);
-    background-color: rgba(0, 74, 198, 0.05);
+    background-color: rgba(16, 185, 129, 0.05);
     transform: scale(1.01);
+}
+
+.dark .dropzone-active {
+    background-color: rgba(16, 185, 129, 0.02);
 }
 
 /* Glassmorphism effects */
@@ -37,6 +53,11 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-card {
+    background: rgba(13, 17, 23, 0.8);
+    border-color: rgba(48, 54, 61, 0.5);
 }
 
 /* Custom Scrollbar */
@@ -78,4 +99,46 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
+}
+
+/* Contêiner de Anúncio Seguro (AdSense Compliance) */
+.ad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px dashed rgba(16, 185, 129, 0.15);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 18px 8px 8px 8px; /* Espaço para o rótulo superior */
+    margin: 24px 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.dark .ad-container {
+    border-color: rgba(16, 185, 129, 0.1);
+    background: rgba(13, 17, 23, 0.5);
+}
+
+.ad-label {
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+}
+
+.dark .ad-label {
+    color: #484f58;
+}
+
+/* Otimização dos detalhes de acordeão do FAQ */
+details summary::-webkit-details-marker {
+    display: none;
 }
